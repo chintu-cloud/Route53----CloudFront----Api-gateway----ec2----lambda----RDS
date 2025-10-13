@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://th.bing.com/th/id/OIP.XFxgvd59iUpODq0x0J_WIQHaHa?w=193&h=193&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3');
+      background-size: 99%;
+      background-repeat: no-repeat; 
+    }
+
+    h2 {
+      text-align: center;
+      color: #2200ff;
+      padding: 20px;
+      background-color: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    
+    }
+
+    /* Additional styles for animation */
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="thankYouMessage">You are uploded details successfully we will check and confirm your seat.</h2>
+
+  <!-- Simple JavaScript for animation -->
+  <script>
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    // Adding a delay before showing the message
+    setTimeout(() => {
+      thankYouMessage.classList.add('visible');
+    }, 500);
+  </script>
+
+</body>
+</html>

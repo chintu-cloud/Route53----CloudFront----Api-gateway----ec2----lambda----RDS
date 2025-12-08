@@ -164,7 +164,7 @@ CREATE TABLE user_accounts (
 
 ## 🖼️ Architecture Diagram (Mermaid)  
 
-```mermaid
+
 flowchart TD
     Client[👩‍💻 Client Browser / Curl] --> CloudFront[🌍 CloudFront Distribution: testing]
     CloudFront --> APIGateway[🌐 API Gateway: my api (/dev)]

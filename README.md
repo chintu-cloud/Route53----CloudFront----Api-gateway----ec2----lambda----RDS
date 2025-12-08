@@ -162,19 +162,20 @@ CREATE TABLE user_accounts (
 
 ---
 
-## 🖼️ Architecture Diagram (Mermaid)  
 
-
+```mermaid
 flowchart TD
-    Client[👩‍💻 Client Browser / Curl] --> CloudFront[🌍 CloudFront Distribution: testing]
-    CloudFront --> APIGateway[🌐 API Gateway: my api (/dev)]
-    APIGateway --> Lambda[⚡ Lambda Function: project based]
-    Lambda --> RDS[(🗄️ RDS: Project DB - MySQL)]
-    IAMLambda[🔑 IAM Role: lambda full-access] --> Lambda
-    IAMEC2[🔑 IAM Role: EC2 full-access] --> EC2[🖥️ EC2 Instance]
+    Client["👩‍💻 Client Browser / Curl"] --> CloudFront["🌍 CloudFront Distribution: testing"]
+    CloudFront --> APIGateway["🌐 API Gateway: my api (/dev)"]
+    APIGateway --> Lambda["⚡ Lambda Function: project based"]
+    Lambda --> RDS["🗄️ RDS: Project DB - MySQL"]
+    IAMLambda["🔑 IAM Role: lambda full-access"] --> Lambda
+    IAMEC2["🔑 IAM Role: EC2 full-access"] --> EC2["🖥️ EC2 Instance"]
     EC2 --> RDS
-    Domain[🌐 Domain: chintu.shop] --> CloudFront
+    Domain["🌐 Domain: chintu.shop"] --> CloudFront
 ```
+
+
 
 ---
 

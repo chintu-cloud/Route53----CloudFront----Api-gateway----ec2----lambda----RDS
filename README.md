@@ -1,7 +1,7 @@
 <img width="836" height="370" alt="project-2" src="https://github.com/user-attachments/assets/35000a86-278c-4415-9f9e-41d74fe5c942" />
 
 
----
+
 
 # 🚀 Project Setup with AWS RDS, IAM, Lambda, API Gateway & CloudFront  
 
@@ -178,10 +178,7 @@ flowchart TD
 
 ---
 
-✨ This README.md is **word-for-word complete**, stylish, and includes a **diagram** showing the architecture flow.  
-
-Would you like me to also add a **sequence diagram** (step-by-step request timeline: Client → CloudFront → API Gateway → Lambda → RDS → Response) for even more clarity?
-### 🧭 Sequence diagram (step-by-step request timeline)
+## 🧭 Sequence Diagram (Step-by-Step Request Timeline)  
 
 ```mermaid
 sequenceDiagram
@@ -201,4 +198,8 @@ sequenceDiagram
     API-->>CF: Forward response
     CF-->>Client: Deliver final response
 ```
+
+---
+
+
 

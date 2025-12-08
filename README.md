@@ -178,27 +178,6 @@ flowchart TD
 
 ---
 
-## 🧭 Sequence Diagram (Step-by-Step Request Timeline)  
-
-```mermaid
-sequenceDiagram
-    participant Client as 👩‍💻 Client (Browser/Curl)
-    participant CF as 🌍 CloudFront (testing)
-    participant API as 🌐 API Gateway (my api /dev)
-    participant L as ⚡ Lambda (project based)
-    participant DB as 🗄️ RDS (Project DB - MySQL)
-
-    Client->>CF: Send HTTP request (GET/POST) to domain or CF endpoint
-    CF->>API: Forward request to REST API (Origin: /dev)
-    API->>L: Invoke Lambda (Lambda proxy integration: ON)
-    Note over L: Parse event, validate input,<br/>prepare DB operation
-    L->>DB: Connect via VPC (read/write query)
-    DB-->>L: Return query result (rows/ack)
-    L-->>API: Return JSON response (statusCode/body/headers)
-    API-->>CF: Forward response
-    CF-->>Client: Deliver final response
-```
-
 ---
 
 
